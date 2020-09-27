@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.madlevel4task2.models.Action
+import com.example.madlevel4task2.models.Game
 import com.example.madlevel4task2.models.GameResult
 import kotlinx.android.synthetic.main.fragment_main.*
+import java.util.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -64,6 +66,10 @@ class MainFragment : Fragment() {
 
         txt_result.visibility = View.VISIBLE
 
+    }
+
+    private fun saveGame(result: GameResult, computerAction: Action, playerAction: Action) {
+        val game = Game(null, computerAction, playerAction, result, date = Date())
     }
 
     // Returns the result of the game (Player wins, draw or computer wins)
