@@ -5,7 +5,9 @@
     <string name="statistics_text">Your all time statistics</string>
     <string name="win_message">You win!</string>
     <string name="lose_message">You lose!</string>
+    <string name="draw_message">Draw</string>
     <string name="player_computer">Computer</string>
+    <string name="player">You</string>
     <string name="computer_wins">Computer wins!</string>
     <string name="draw">Draw</string>
     <string name="win_stat">Win:</string>
@@ -15,4 +17,5 @@
     <string name="rock_option">Rock_option</string>
     <string name="scissors_option">Scissors option</string>
     <string name="action_show_history">See history</string>
+    <string name="versus">V.S.</string>
 </resources>
