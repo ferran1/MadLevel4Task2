@@ -2,6 +2,7 @@ package com.example.madlevel4task2.database
 
 import android.content.Context
 import com.example.madlevel4task2.models.Game
+import com.example.madlevel4task2.models.GameResult
 
 class GameRepository(context: Context) {
 
@@ -27,5 +28,7 @@ class GameRepository(context: Context) {
     suspend fun deleteAllGames() {
         gameDAO.deleteAllGames()
     }
+
+    suspend fun countResult(gameResult: GameResult): Int = gameDAO.countResult(gameResult)
 
 }
