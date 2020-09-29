@@ -36,6 +36,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        gameRepository = GameRepository(requireContext())
         initViews()
     }
 
@@ -75,6 +76,7 @@ class MainFragment : Fragment() {
 
         txt_result.visibility = View.VISIBLE
 
+        saveGame(result, computerAction, playerAction)
     }
 
     // Saves the game into the Room database using a coroutine background thread

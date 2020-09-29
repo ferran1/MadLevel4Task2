@@ -1,98 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/txt_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Draw"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="411dp"
+        android:layout_height="190dp"
+        android:layout_margin="4dp">
 
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="249dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="206dp"
-        android:layout_marginBottom="37dp"
-        android:text="Mon Jun 22 09:15:44 GMT+00:00 2020"
-        app:layout_constraintBottom_toTopOf="@+id/txt_V.S"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="49dp"
+            android:text=""
+            android:textSize="25sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toTopOf="@+id/txt_V.S"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.466"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/txt_V.S"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="431dp"
-        android:text="@string/versus"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ivPlayer"
-        app:layout_constraintStart_toEndOf="@+id/ivComputer"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="249dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="109dp"
+            android:text=""
+            card_view:layout_constraintBottom_toTopOf="@+id/tvPlayer"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/ivComputer"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="239dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="12dp"
-        android:background="#35449A"
-        android:src="@drawable/paper"
-        app:layout_constraintBottom_toTopOf="@+id/tvComputer"
-        app:layout_constraintEnd_toStartOf="@+id/txt_V.S"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txt_V.S"
+            android:layout_width="52dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="185dp"
+            android:layout_marginBottom="70dp"
+            android:text="@string/versus"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/ivComputer"
+            card_view:layout_constraintTop_toBottomOf="@+id/txt_result" />
 
-    <ImageView
-        android:id="@+id/ivPlayer"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="12dp"
-        android:background="#35449A"
-        android:src="@drawable/paper"
-        app:layout_constraintBottom_toTopOf="@+id/tvPlayer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_V.S"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate"
-        app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@+id/ivComputer"
+            android:layout_width="89dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="74dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#35449A"
+            android:src="@drawable/paper"
+            card_view:layout_constraintBottom_toTopOf="@+id/tvComputer"
+            card_view:layout_constraintEnd_toStartOf="@+id/txt_V.S"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/tvComputer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/player_computer"
-        app:layout_constraintEnd_toEndOf="@+id/ivComputer"
-        app:layout_constraintTop_toBottomOf="@+id/txt_V.S" />
+        <ImageView
+            android:id="@+id/ivPlayer"
+            android:layout_width="88dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="80dp"
+            android:background="#35449A"
+            android:src="@drawable/paper"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/tvDate" />
 
-    <TextView
-        android:id="@+id/tvPlayer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="37dp"
-        android:text="@string/player"
-        app:layout_constraintBottom_toBottomOf="@+id/tvComputer"
-        app:layout_constraintEnd_toEndOf="@+id/ivPlayer"
-        app:layout_constraintTop_toTopOf="@+id/tvComputer" />
+        <TextView
+            android:id="@+id/tvComputer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="137dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/player_computer"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/tvPlayer"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPlayer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="104dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/player"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/tvComputer"
+            card_view:layout_constraintTop_toBottomOf="@+id/tvDate" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

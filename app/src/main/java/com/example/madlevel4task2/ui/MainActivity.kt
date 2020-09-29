@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Hides the history button when the user is on the history fragment
-
     private fun historyBtnToggler() {
         navController.addOnDestinationChangedListener { _,       destination, _ ->
             if (destination.id in arrayOf(R.id.historyFragment)) {

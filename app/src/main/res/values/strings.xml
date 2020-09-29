@@ -19,4 +19,5 @@
     <string name="action_show_history">See history</string>
     <string name="history_menu_item">Your game history</string>
     <string name="versus">V.S.</string>
+    <string name="successfully_deleted_msg">All the games have successfully been deleted!</string>
 </resources>
