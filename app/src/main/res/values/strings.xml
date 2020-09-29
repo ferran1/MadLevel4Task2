@@ -17,5 +17,6 @@
     <string name="rock_option">Rock_option</string>
     <string name="scissors_option">Scissors option</string>
     <string name="action_show_history">See history</string>
+    <string name="history_menu_item">Your game history</string>
     <string name="versus">V.S.</string>
 </resources>

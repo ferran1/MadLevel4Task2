@@ -2,27 +2,21 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
+        android:id="@+id/mainFragment"
         android:name="com.example.madlevel4task2.ui.MainFragment"
-        android:label="temp"
-        tools:layout="@layout/fragment_main">
-
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_mainFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
+        android:id="@+id/historyFragment"
         android:name="com.example.madlevel4task2.ui.HistoryFragment"
-        android:label="temp"
-        tools:layout="@layout/fragment_history">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

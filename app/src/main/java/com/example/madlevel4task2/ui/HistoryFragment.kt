@@ -1,10 +1,8 @@
 package com.example.madlevel4task2.ui
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.madlevel4task2.R
 
 /**
@@ -22,9 +20,12 @@ class HistoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        view.findViewById<Button>(R.id.button_second).setOnClickListener {
-//            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-//        }
+        setHasOptionsMenu(true)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_history, menu)
+    }
+
+
 }

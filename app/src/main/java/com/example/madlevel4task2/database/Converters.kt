@@ -9,7 +9,7 @@ class Converters {
 
     @TypeConverter
     fun dateToTimestamp(date: Date?): Long? {
-        return date?.time?.toLong()
+        return date?.time
     }
 
 
@@ -23,9 +23,9 @@ class Converters {
     fun fromIndex(value: Int?): Action? {
         return value?.let {
             when (it) {
-                1 -> Action.PAPER
-                2 -> Action.SCISSORS
-                else -> Action.ROCK
+                1 -> Action.ROCK
+                2 -> Action.PAPER
+                else -> Action.SCISSORS
             }
         }
     }
@@ -34,8 +34,8 @@ class Converters {
     fun actionToInt(action: Action?): Int? {
         return action?.let {
             when (it) {
-                Action.PAPER -> 1
-                Action.SCISSORS -> 2
+                Action.ROCK -> 1
+                Action.PAPER -> 2
                 else -> 0
             }
         }
