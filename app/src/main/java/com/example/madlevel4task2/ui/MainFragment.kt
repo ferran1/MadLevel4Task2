@@ -1,10 +1,8 @@
 package com.example.madlevel4task2.ui
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.madlevel4task2.R
 import com.example.madlevel4task2.database.GameRepository
 import com.example.madlevel4task2.models.Action
@@ -35,9 +33,16 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
 
         gameRepository = GameRepository(requireContext())
         initViews()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        requireActivity().toolbar.title = getString(R.string.app_name)
+        menu.findItem(R.id.action_delete_history).isVisible = false
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     // Setup the main activity view

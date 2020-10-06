@@ -1,5 +1,6 @@
 package com.example.madlevel4task2.ui
 
+import android.app.ActionBar
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.madlevel4task2.R
 import com.example.madlevel4task2.database.GameRepository
 import com.example.madlevel4task2.models.Game
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_history.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,8 +27,6 @@ class HistoryFragment : Fragment() {
     private val gameAdapter = GameAdapter(games)
     private lateinit var gameRepository: GameRepository
     private val mainScope = CoroutineScope(Dispatchers.Main)
-
-//    private lateinit var viewManager: RecyclerView.LayoutManager
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -46,7 +46,11 @@ class HistoryFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_history, menu)
+        // Change toolbar title when the fragment switches to history fragment
+        requireActivity().toolbar.title = "Your Game History"
+        menu.findItem(R.id.action_go_to_history).isVisible = false
+        menu.findItem(R.id.action_delete_history).isVisible = true
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     // Used to perform actions on the menu buttons
